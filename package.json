@@ -9,7 +9,7 @@
     "cy:open": "cypress open",
     "cy:open:tablet": "cypress open --config viewportWidth=767,viewportHeight=480",
     "test": "cypress run --record --tag 'desktop'",
-    "test:tablet": "cypress run --record --tag 'tablet' --config viewportWidth=767,viewportHeight=480 --spec cypress/integration/authenticatedScenarios.spec.js"
+    "test:tablet": "cypress run --record --tag 'tablet' --config viewportWidth=767,viewportHeight=480 --spec cypress/integration/authenticatedScenarios.spec.js --env grepTags=@desktop-and-tablet"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +22,8 @@
     "eslint": "^8.0.1",
     "eslint-plugin-cypress": "^2.12.1",
     "faker": "^5.5.3"
+  },
+  "dependencies": {
+    "cypress-grep": "^2.5.3"
   }
 }
